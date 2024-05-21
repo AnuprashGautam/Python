@@ -10,17 +10,21 @@ while True:
     if choice == -1:
         break
     elif choice == 1:
-        midline = lines - 2
-        if midline == 0 or midline > 0:
-            print("*******")
-            for i in range(midline):
-                print("*     *")
-            print("*******")
+        for i in range(1, lines + 1):
+            for j in range(1, lines + 1):
+                if i == 1 or i == lines or j == 1 or j == lines:
+                    print("*",end=" ")
+                else:
+                    print(" ", end=" ")
+            print()
+                
     elif choice == 2:
         for i in range(1, lines + 1):
             print("*" * i)
+            print()
     elif choice == 3:
         for i in range(lines, 0, -1):
             print("*" * i)
+            print()
     else:
         print("Invalid choice.")
